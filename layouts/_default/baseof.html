@@ -5,22 +5,22 @@
 {{- partial "custom-head.html" . -}}
 </head>
 <body>
-<div id="main">
-    <div class="preempdia">
+    <div class="container">
         {{- partial "header.html" . -}}
-        <div class="main-part">
-            <div class="main-row">
-                <div class="leftside">
-                    {{- partial "menu.html" . -}}
-                </div>
-                <div class="rightside">
-                    {{- block "main" . -}}
-                    {{- end -}}
+        <div class="row no-gutters">
+            <div class="col-3 menu-wrapper">
+                {{- partial "menu.html" . -}}
+            </div>
+            <div class="col content-wrapper">
+                <div class="content">
+                {{- block "main" . -}}
+                {{- end -}}
                 </div>
             </div>
         </div>
-        
+        <div class="menu-bottom">
+                {{- partial "menu.html" . -}}
+        </div>
     </div>
-</div>
 </body>
 </html>

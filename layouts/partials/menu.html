@@ -1,38 +1,16 @@
 {{$currentNode := .}}
 
-<div class="drop-menu">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div id="panel-title">
-                    <a class="home" href="#">
-                      <i class="fas fa-home"></i>
-                      Home
-                    </a>
-                </div>
-            </div>
-        </div>
-        {{- range .Site.Home.Sections.ByWeight -}}
-
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                  <div id="panel-title">
-                      <a href="#" class="collapsed" data-toggle="collapse" data-target="#demo2">
-                        <i class="fas fa-check-circle"></i>
-                        {{.Title}}
-                      </a>
-                  </div>
-              </div>
-              <div id="demo2" class="panel-collapse collapse">
-                  <div class="parts">
-                      <ul>
-                      {{ range .Pages -}}
-                          <li><a href="{{ .URL }}">{{- .Name -}}</a></li>
-                      {{ end -}}
-                      </ul>
-                  </div>
-              </div>
-          </div>
-        {{- end -}}
-    </div>
-</div>
+<ul class="nav flex-column">
+  {{- range .Site.Home.Sections.ByWeight -}}
+  <li class="nav-item nav-section">
+    <a>
+      {{.Title}}
+    </a>
+  </li>
+  {{ range .Pages -}}
+  <li class="nav-item">
+    <a href="{{ .URL }}" class="nav-link">{{- .Name -}}</a>
+  </li>
+  {{ end -}}
+  {{- end -}}
+</ul>
