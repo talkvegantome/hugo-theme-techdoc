@@ -1,12 +1,21 @@
-<header>
-<h1>{{ .Site.Title }}</h1>
-{{ with .Site.Params.version }}
- <span class="version">Version {{ . }}</span>
-{{end}}
-{{- with .Site.Params.github_repository -}}
-<a href="{{ . }}" class="github"><i class="fab fa-github"></i></a>
-{{- end -}}
-{{ with .Site.Params.description }}
-<p class="description">{{ . }}</p>
-{{end}}
-</header>
+
+<div class="header">
+    <div class="container-fluid">
+        <a class="logo" href="index.html">{{ .Site.Title }}</a>
+        <div class="trans">
+              <div class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">select language</a>
+              <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="#">dutch</a></li>
+                    <li><a class="french" href="#">french</a></li>
+                    <li><a class="german" href="#">german</a></li>
+                    <li><a class="irish" href="#">irish</a></li>
+                    <li class="last"><a class="italian" href="#">italian</a></li>
+                </ul>
+              </div>
+            </div>  
+        </div>
+    </div>
+</div>
+

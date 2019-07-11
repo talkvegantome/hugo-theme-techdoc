@@ -12,15 +12,21 @@
 <meta name="description" content="{{ .Site.Params.description }}">
 {{- end }}
 {{ .Hugo.Generator }}
+<link href="{{"css/style.css" | absURL}}" type="text/css" rel="stylesheet">
+<link href="{{"css/responsive.css" | absURL}}" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="stylesheet" href="{{"css/theme.min.css" | absURL}}">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-{{ partial "meta/chroma.html" . -}}
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="{{"js/functions.min.js" | absURL}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-<script src="{{"js/jquery.backtothetop/jquery.backtothetop.min.js" | absURL}}"></script>
+<!--other useful css-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<!--other useful css-->
+{{- partial "fonts.html" . }}
+<!--other useful js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 {{- partial "meta/google-analytics-async.html" . -}}
 {{- partial "meta/tag-manager.html" . -}}
 {{- partial "meta/google-site-verification.html" . -}}
