@@ -3,7 +3,7 @@
 
 {{- range .Site.Data.contributors -}}
 <div class="card mr-3"  style="max-width: 18rem;flex:inherit">
-    <img class="card-img-top" src="{{.image}}" alt="{{ .name }}" max/>
+    <img class="card-img-top" src="{{.image}}" alt="Photo of {{ .name }}" title="Photo of {{ .name }}"/>
     <div class="card-body">
       <h5 class="card-title">{{ .name }}</h5>
       <p class="card-text">{{ .bio }}</p>
@@ -13,14 +13,10 @@
     </ul>
     <div class="card-footer text-muted">
         {{- if isset . "twitter" -}}
-        <a href="{{.twitter}}" class="mr-3">  
-            <img src="/twitter-circle.png">
-        </a>
+        <a href="{{.twitter}}" class="mr-3" title="Twitter of {{ .name }}"><img src="/twitter-circle.png"></a>
         {{- end -}}
         {{- if isset . "website" -}}
-        <a href="{{.website}}" class="mr-3">  
-            <img src="/link.png">
-        </a>
+        <a href="{{.website}}" class="mr-3" title="Website of {{ .name }}"><img src="/link.png"></a>
         {{- end -}}
     </div>
     
