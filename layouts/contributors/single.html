@@ -6,10 +6,11 @@
     <img class="card-img-top" src="{{.image}}" alt="{{ .name }}" max/>
     <div class="card-body">
       <h5 class="card-title">{{ .name }}</h5>
-      <h6 class="card-title"><strong>Pronouns:</strong> {{ .pronouns }}</h6>
       <p class="card-text">{{ .bio }}</p>
     </div>
-    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Pronouns:</strong> {{ .pronouns }}</li>
+    </ul>
     <div class="card-footer text-muted">
         {{- if isset . "twitter" -}}
         <a href="{{.twitter}}" class="mr-3">  
