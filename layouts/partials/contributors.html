@@ -7,6 +7,14 @@
             <img src="{{$contributor.image}}" class="figure-img img-fluid rounded-circle img-thumbnail" style="max-height:5em;max-width:5em" />
             <figcaption class="figure-caption">{{ $contributor.name }}</figcaption>
             <figcaption class="figure-caption">{{ humanize .role }}</figcaption>
+            <figcaption class="figure-caption">
+                {{- if isset $contributor "twitter" -}}
+                <a href="{{$contributor.twitter}}" class="mr-3" title="Twitter of {{ $contributor.name }}"><img src="/twitter-circle.png"></a>
+                {{- end -}}
+                {{- if isset $contributor "website" -}}
+                <a href="{{$contributor.website}}" class="mr-3" title="Website of {{ $contributor.name }}"><img src="/link.png"></a>
+                {{- end -}}
+            </figcaption>
         </figure>
     {{- end -}}
 {{ end }}
