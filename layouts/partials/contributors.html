@@ -1,6 +1,7 @@
 
 {{ if isset .Params "contributors" }}
     <h1>Article Contributors</h1>
+    <div class="d-flex">
     {{- range .Params.contributors -}}
         {{ $contributor := index $.Site.Data.contributors .name }}
         <figure class="figure mr-3">
@@ -17,4 +18,5 @@
             </figcaption>
         </figure>
     {{- end -}}
+    </div>
 {{ end }}
